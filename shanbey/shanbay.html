@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扇贝，知道你在改变</title>
+    <link href="https://v3.bootcss.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="" href="https://assets-cdn.github.com/pinned-octocat.svg">
+    <style type="text/css">
+    .login {
+        margin-right: 25px;
+        margin-top: 10px;
+        height: 25px;
+    }
+
+    .login span {
+        padding: 0 10px;
+    }
+
+    .login a {
+        color: #333;
+    }
+
+    .header img {
+        width: 130px;
+        margin: 20px 0 15px;
+    }
+
+    .carousel-links a {
+        color: #666;
+        width: 75px;
+        line-height: 45px;
+        display: inline-block;
+        transition: font-size 0.2s;
+        font-size: 16px;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+
+    .carousel-links a:hover {
+        font-size: 25px;
+    }
+    .carousel-control {
+      background: none;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      width: 20px;
+      height: 66px;
+      opacity: 1;
+      top: 50%;
+      margin-top: -33px;
+    }
+    .body .left {
+      left: -40px;
+      background-image: url(https://static.baydn.com/media/media_store/image/a5c71e1fe995e2979058b3e780dd88e9.png);
+    }
+    .body .right {
+       right: -40px;
+       background-image: url(https://static.baydn.com/media/media_store/image/ee0204d6a83d3441b98334b87958524d.png);
+    }
+    </style>
+    <!-- <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico"> -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container header">
+        <div class="login text-right">
+            <a href="https://www.shanbay.com/web/account/login/">登录</a>
+            <span>|</span>
+            <a href="https://www.shanbay.com/web/account/register">注册</a>
+        </div>
+        <div class="text-center">
+            <img src="https://static.baydn.com/static/img/logo_v5.png">
+        </div>
+        <div class="carousel-links text-center">
+            <a href="/bdc/client/guide" class="active">单词</a>
+            <a href="/listen/">听力</a>
+            <a href="/speak/">口语</a>
+            <a href="/news/articles">阅读</a>
+            <a href="/sentence/review/">炼句</a>
+        </div>
+    </div>
+    <div class="container body">
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="https://static.baydn.com/media/media_store/image/7ffbf4084480462a6db952859e7d8b4d.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://static.baydn.com/media/media_store/image/feeee16e97407bbca8957702a674e421.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://static.baydn.com/media/media_store/image/0121935e7513b1e001d04a39c62b6247.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://static.baydn.com/media/media_store/image/b1505753be03f948bf9ba56c2ecb33db.png" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://static.baydn.com/media/media_store/image/45ee5542fe275ad4ac098fd3f410efa0.png" alt="">
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-apps" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-apps" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </a>
+
+
+
+
+
+
+
+        <a href="https://www.shanbay.com/web/account/login/">登录</a>
+        <span>|</span>
+        <a href="https://www.shanbay.com/web/account/register">注册</a>
+        <a href="#" class="carousel-    control"><span class="glyphicon glyphicon-heart"></span></a>
+        <br>
+        <br>
+    </div>
+    <script type="text/javascript">
+    $('#myCarousel').carousel({
+        interval: 3000
+    });
+    </script>
+</body>
+
+</html>
