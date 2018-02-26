@@ -1,0 +1,52 @@
+.login {
+    margin-right: 25px;
+    margin-top: 10px;
+    height: 25px;
+}
+
+.login span {
+    padding: 0 10px;
+}
+
+.login a {
+    color: #333;
+}
+
+.header img {
+    width: 130px;
+    margin: 20px 0 15px;
+}
+
+.carousel-links a {
+    color: #666;
+    width: 75px;
+    line-height: 45px;
+    display: inline-block;
+    transition: font-size 0.2s;
+    font-size: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.carousel-links a:hover {
+    font-size: 25px;
+}
+.carousel-control {
+    background: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    width: 20px;
+    height: 66px;
+    opacity: 1;
+    top: 50%;
+    margin-top: -33px;
+}
+.body .left {
+    left: -40px;
+    background-image: url(https://static.baydn.com/media/media_store/image/a5c71e1fe995e2979058b3e780dd88e9.png);
+}
+.body .right {
+    right: -40px;
+    background-image: url(https://static.baydn.com/media/media_store/image/ee0204d6a83d3441b98334b87958524d.png);
+}
