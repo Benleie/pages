@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2048啊</title>
+    <link rel="stylesheet" type="text/css" href="mylib/game.css">
+</head>
+<body>
+    <header class="clearfix">
+        <div class="fl game-title"><span>2048</span></div>
+        <div class="fr game-score">
+            <div class="game-score-div clearfix">
+                <div class="this-score score-wrap fl">
+                    <p>分数</p>
+                    <h3>0</h3>
+                </div>
+                <div class="history-score score-wrap fr">
+                    <p>历史最高成绩</p>
+                    <h3>0</h3>
+                </div>
+            </div>
+            <div class="restart-div">
+                <button type="button" class="restart">重新开始</button>
+            </div>
+        </div>
+        
+    </header>
+    <div  >
+        <button type="button" class="finish">快速结束</button>
+    </div>
+    <ul class="game-ul"></ul>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="mylib/game.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // game2048.init('body');
+            game2048.start()
+        })
+    </script>
+    
+    
+        
+</body>
+</html>

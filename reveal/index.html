@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>暗物质</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+			/* #xuan li{
+				margin-left: 15%;
+			} */
+			#xuan {
+				float: left
+			}
+			#right {
+				float: right
+			}
+		</style> 
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="zoom">
+					<h1>让我们开始吧</h1>
+				</section>
+				<section>
+					<h2>暗物质的可观测效应</h2>
+					<ul>
+						<li>什么是暗物质</li>
+						<li>如何观测它</li>
+						<li>等待与思考</li>
+					</ul>
+				</section>
+				<section data-background="#b5533c" data-background-transition="zoom">
+					<section>
+						<h2>从乌云开始</h2>
+						<ul>
+							<li>20世纪-以太漂移与黑体辐射的紫外灾难</li>
+							<li>21世纪-暗物质与暗能量</li>
+						</ul>
+					</section>
+					<section>
+						<h3>暗能量理论的提出</h3>
+						<ul>
+							<li>宇宙常数与哈勃定律</li>
+							<li>宇宙大爆炸</li>
+							<li>宇宙在加速膨胀</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section data-transition="fade" >
+						<ul id="xuan">
+							<li>1846-预言海王星</li>
+							<li>1933-暗物质假说</li>
+							<li>70年代</li>
+						</ul>
+						<img id="right" src="./xuan.jpg" alt="">
+					</section>
+					<section data-transition="fade">
+							<ul>
+								<p>Fritz Zwicky-引力透镜</p>
+								<p>引力场源对位于其后的天体发出的电磁辐射所产生的会聚或多重成像效应。类似凸透镜的汇聚效应，因而得名。</p>
+							</ul>
+					</section>
+					<section data-transition="fade">
+						<ul>
+							<p>黑洞？中子星？</p>
+							<p>修正万有引力理论？</p>
+							<p>子弹星系团!</p>
+						</ul>
+					</section>
+					<section data-background="./bullet.png" data-transition="fade">
+					</section>
+				</section >
+				<section>
+					<section data-transition="concave">
+						<h6>标准模型(波色子和费米子)与超对称理论</h6>
+						<img src="lizi.jpeg" alt="超对称">
+					</section>
+					<section data-transition="concave">
+						<p>最佳候选粒子：WIMPs(weakly interacting massive particle),弱相互作用大质量粒子。它具有如下特征：</p>
+						<ul>
+							<li>只通过弱核力和引力发生作用</li>
+							<li>质量大，速度慢，易于凝结成晕(halo)</li>
+						</ul>
+					</section>
+					<section data-transition="concave">
+						<h3>暗物质粒子的探测</h3>
+						<ul>
+							<li>大型强子对撞机创造暗物质</li>
+							<li>地下探测器的直接探测</li>
+							<li>间接探测</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<p>推荐阅读</p>
+					<ul>
+						<p>《暗物质与恐龙》</p>
+						<p>《寻找暗物质》</p>
+						<p>《4%的宇宙》</p>
+						<p>《第五元素》</p>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				transition: 'convex',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
