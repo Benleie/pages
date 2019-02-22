@@ -7,15 +7,19 @@
     <title>github user</title>
     <style>
         a { display:block; text-decoration: none; }
+        .avatar { width: 230px; }
     </style>
 </head>
 <body>
     <div id="github">
         
-            
-        <input placeholder="please enter a userName:" v-model="userName">
-        <p id="recommended"></p>
-        <a href="">
+        <p>请输入用户名：<input placeholder="please enter a userName:" v-model="userName"></p>
+        
+        <p id="recommended">
+            <code>推荐用户：</code>
+            <span v-for="user in recommendedUsers" @click="changeUser(user)"> {{user}} </span>
+        </p>
+        <a :href="'https://github.com/' + userName" class="avatar">
             <img :src="avatar" alt width="230" height="230">
         </a>
         <a href="">repositories<span class="Counter"> {{repositories}} </span></a>
@@ -41,7 +45,8 @@
                 recommendedUsers:['songxingguo', 'bailicangdu', 'jiaaa1014', 'tj']
             },
             mounted: function () {
-                this.debouncedNameChanged = _.debounce(this.nameChanged, 1400)
+                
+                this.debouncedNameChanged = _.debounce(this.nameChanged, 1000)
                 this.getApi(this);
             },
 
@@ -53,9 +58,10 @@
 
             methods:{
                 getApi:function (app) {
-                    
+                    let i = 1;
 
                     axios.defaults.baseURL = 'https://api.github.com';
+                    axios.defaults.headers.common['Authorization'] = 'token c3f15d89346033e9106e2640e37aa2ec40fe30ef'
 
                     axios.get('/users/' + app.userName)
                         .then(function (response) {
@@ -67,26 +73,42 @@
                         })
 
                     //get user's starred repos   
-                    let starredLists = [],
-                        i = 0;
-                    do {
+                    let starredLists = []
+                    
+                    !function getStarred(index){
+                        axios.get(`/users/${app.userName}/starred?page=${index++}&per_page=100`)
+                            .then(function(response){
+                                starredLists.push(...response.data)
+                                console.log(starredLists.length + '   ' + index)
+                                if(response.data.length == 100)
+                                    getStarred(index);
+                                if(response.data.length != 100)
+                                    app.stars = starredLists.length;
+                            })
+                    }(1)
+                    
+
+
+                    /* do {
                         axios.get(`/users/${app.userName}/starred?page=${i++}&per_page=100`)
                             .then(function (response) {
-                                if(response.data.length == 0)
-                                    break;
                                 starredLists.push(...response.data)
-                                console.log('starredLists.length: '+ starredLists.length)
-                                if(response.data.length % 100 != 0)
-                                    app.stars = starredLists.length
+                                console.log('starredLists.length: '+ starredLists.length + ' ' + i)
+                                
                                 // app.stars = response.data.length
                             })
                             
-                    } while (i < 8);
-
+                    } while (i < 25); */
                 },
 
                 nameChanged:function () {
+                    this.stars = 0;
                     this.getApi(this)
+                    console.log("debounced time is 1000")
+                },
+
+                changeUser:function(user){
+                    this.userName = user
                 }
             }
         })
