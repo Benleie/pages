@@ -1,0 +1,71 @@
+body {
+	background-color: #f6f6f6;
+}
+#wrapper {
+	margin: 220px auto 0;
+	width: 700px;
+	padding: 0 16px;
+}
+#quote-box {
+	background-color: white;
+	margin-bottom: 10px;
+	padding: 5px 20px 0 20px;
+}
+#aaa-author {
+	display: flex;
+	margin-bottom: 20px;
+}
+.quote-author {
+	display: flex;
+	flex-direction: column;
+}
+.quote-author div {
+	margin-top: 10px;
+	width: 150px;
+}
+.face {
+	position: relative;
+	float: left;
+	margin-right: 14px;
+}
+.quote-author .name{
+	font-size: 15px;
+	line-height: 1.2;
+	
+}
+#author {
+	font-weight: 600;
+}
+.badge {
+	color: #646464;
+	font-size: 14px;
+	line-height: 1.1;
+}
+
+#new-quote {
+	margin-left: 300px;
+	height: 50px;
+	padding: 12px 20px 10px 20px;
+	border: none;
+	border-radius: 5px;
+}
+
+.github{
+	height: 54px;
+	
+}
+
+.time {
+	margin-top: 10px;
+	color: #8590a6;
+	font-size: 14px;
+}
+
+.actions button {
+	/*width: 65px;*/
+	border:none;
+	background: none;
+	color: #8590a6;
+	cursor: pointer;
+	font-size: 20px;
+}
