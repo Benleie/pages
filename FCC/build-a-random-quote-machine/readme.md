@@ -1,4 +1,4 @@
-这是FCC	前端框架的一个项目。
+这是FCC	前端框架的一个项目。[链接](https://benleie.github.io/pages/FCC/build-a-random-quote-machine/style.html)
 
 功能相对简单：异步获取quotes.json，得到数据quotes，每次点击按钮"New quote",就随机将quotes中的一个名言渲染到页面。最简单的方式，也是我的做法，就是通过innerText直接操作DOM来更新quote.
 
