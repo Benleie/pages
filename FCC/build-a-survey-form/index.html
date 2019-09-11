@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>survey form</title>
+    <style>
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none !important;
+				/* margin: 0; */
+			}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1 id="title">twitter</h1>
+        <p id="description">come on!</p>
+        <form action="" id="survey-form" > 
+        	<div>
+        		<label for="" id="name-label">Name:</label>
+        		<input type="text" id="name" placeholder="Enter your name" required>
+        		<span id="name-validation"></span>
+        	</div>
+        	<div>
+        		<label for="" id="email-label">Email:</label>
+        		<input type="email" id="email" placeholder="Enter your email" required>
+        		<span id="email-validation"></span>
+        	</div>
+        	<div>
+        		<label for="" id="number-label">Stature:</label>
+        		<input type="number" id="number" placeholder="Enter your stature(cm)"
+        			min="80" max="280">
+        			<span id="number-validation"></span>
+        	</div>
+        	<div>
+        		<label for="">What do you use Twitter for?</label>
+        		<select name="" id="dropdown">
+        			<option value="">Study</option>
+        			<option value="">Date</option>
+        			<option value="">Fun</option>
+        			<option value="">Politics</option>
+        		</select>
+        	</div>
+        	<div>
+        		<label for="">How likely is that you would recommend Twitter to a friend</label>
+        		<input type="radio" value="Sure"  name="recommend">Sure
+        		<input type="radio" value="Maybe" name="recommend">Maybe
+        		<input type="radio" value="NotSure" name="recommend">Not sure
+        	</div>
+        	<div>
+        		<label for="" >The topics you like</label>
+        		<input type="checkbox" value="Movies">Movies
+        		<input type="checkbox" value="Techs">Techs
+        		<input type="checkbox" value="Politics">Politics
+        		<input type="checkbox" value="Ways to learn">Ways to learn
+        	</div>
+        	
+        	<div>
+        		<label for="">Any comments or suggestion?</label>
+        		<textarea name="" id=""  placeholder="Enter your commnets here"></textarea>
+        	</div>
+        	<div>
+        		<button type="submit" id="submit">Sign Up</button>
+        	</div>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+    	let getName = document.getElementById('name')
+    	  , getNameSpan = document.getElementById('name-validation')
+    	  , getEmail = document.getElementById('email')
+    	  , getEmailSpan = document.getElementById('email-validation')
+    	  , getNumber = document.getElementById('number')
+    	  , getNumberSpan = document.getElementById('number-validation')
+
+    	getName.onblur = function(){
+    		getNameSpan.innerText = "What you input is : " + this.value
+    	}
+    	getName.onfocus = function(){
+    		getNameSpan.innerText = ""
+    	}
+    	getNumber.onblur = function() {
+    		getNumberSpan.innerText = 'A ' + typeof this.value
+    	}
+    	getNumber.onfocus = function() {
+    		getNumberSpan.innerText = ""
+		}
+		
+    	
+    	document.getElementsByTagName('link')[1].onload = function(){
+    		console.log(this)
+    	}
+    </script>
+    
+</body>
+</html>

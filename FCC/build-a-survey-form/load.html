@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>learn onload</title>
+	<link href="https://cdn.bootcss.com/tailwindcss/0.7.4/components.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.6.2/animate.css" rel="stylesheet">
+    <script>
+    	function load (){
+    		console.log(this.lang)
+    	}
+    </script>
+    <script onload="load()">
+    	let links = document.getElementsByTagName('link')
+    	/*.onload = function(){
+    		console.log(this)
+    	}*/
+    	console.log(links)
+    	console.log('hello?')
+    	
+    </script>
+</head>
+<body onload="load()">
+	<div></div>
+	<script onload="load()">
+    	// let links = document.getElementsByTagName('link')
+    	/*.onload = function(){
+    		console.log(this)
+    	}*/
+
+    	// window.onload =	()=> console.log('window Load')
+    	// document.body.onload = ()=> console.log('document.body loaded!')
+    	document.addEventListener('DOMContentLoaded', function(){
+    		console.log('document DOMContentLoaded')
+    	})
+    	// document.onDOMContentLoaded = ()=> console.log('document DOMContentLoaded')
+    	console.log('hh')
+
+    </script>
+</body>
+</html>
