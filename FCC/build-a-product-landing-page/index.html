@@ -3,18 +3,141 @@
 <head>
 	<meta charset="UTF-8">
 	<title>FCC:Product Landing Page</title>
+	<style>
+		#header img {
+			width: 130px;
+			max-width: 100%;
+		}
+		#header {
+			display: flex;
+			/*使得nav出现在右侧*/
+			justify-content: space-between; 
+			position: fixed;
+			width: 80%;
+			top:0; 
+			left: 50px;
+			/*避免滚动后main的内容出现在#header中，必须设置背景颜色*/
+			background-color: #eee;
+		}
+		#nav-bar {
+			/*垂直居中*/
+
+			display: flex;
+			align-items: center;
+			background-color: lightgray;
+		}
+		#nav-bar a {
+			text-decoration: none;
+			width: 100px;
+		}
+		main {
+			width: 100%;
+			margin: 100px auto 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		main section {
+			width: 500px;
+		}
+		article p {
+			font-size: 17px;
+		}
+		@media  screen and (max-width: 900px) {
+			main {
+				width: 600px;
+			}
+		}
+	</style>
 </head>
 <body>
 	<header id="header">
-		<img src="" alt="" id="header-img">
+		<img src="https://static.baydn.com/static/img/logo_v5.png" alt="" id="header-img">
 		<nav id="nav-bar">
-			<ul>
-				<li><a href="" class="nav-link"></a></li>
-				<li><a href="" class="nav-link"></a></li>
-				<li><a href="" class="nav-link	"></a></li>
-			</ul>
+				<a href="#Words" class="nav-link">单词</a>
+				<a href="#Listening" class="nav-link">听力</a>
+				<a href="#Speaking" class="nav-link">口语</a>
+				<a href="#Reading" class="nav-link">阅读</a>
+				<a href="#Coding" class="nav-link">编程</a>
 		</nav>
 	</header>
+	<main>
+		<section id="Words">
+			<div></div>
+			<header>扇贝单词</header>
+			<article>
+				<p>智慧词根，派生词，权威英文字典</p>
+				<p>精选英文例句真人发音</p>
+				<p>启发式提示抗遗忘</p>
+				<p>单词记住啦</p>
+			</article>
+		</section>
+
+
+		<section id="Listening">
+			<div>
+				<img src="" alt="">
+			</div>
+			<header>扇贝听力</header>
+			<article>
+				<p>一句一句听，听懂为止</p>
+				<p>听不懂，刮开刮刮卡</p>
+				<p>写不出，提示来帮忙</p>
+				<p>没有听不出的文章</p>
+			</article>
+		</section>
+
+
+		<section id="Speaking">
+			<div>
+				<img src="" alt="">
+			</div>
+			<header>扇贝口语</header>
+			<article>
+				<p>雅思口语，和考官聊High</p>
+				<p>地道美语，带你玩遍全球</p>
+				<p>边听边读说出口</p>
+				<p>说过不会忘</p>
+			</article>
+		</section>
+
+
+		<section id="Reading">
+			<div>
+				<img src="" alt="">
+			</div>
+			<header>扇贝阅读</header>
+			<article>
+				<p>精选每日全球新知，用英语看懂世界</p>
+				<p>点击查词，扫清单词障碍</p>
+				<p>阅读笔记，帮你看懂英文</p>
+				<p>读后感，让你看懂人生</p>
+			</article>
+		</section>
+			
+
+
+		<section id="Coding">
+			<div>
+				<img src="" alt="">
+			</div>
+			<header>扇贝编程</header>
+			<article>
+				<p>边学边练的互动讲解</p>
+				<p>有趣的上机实践</p>
+				<p>巩固知识的随堂测验</p>
+				<p>整理好的知识卡片</p>
+			</article>
+		</section>
+
+	</main>
+	<footer>
+			<form action="https://www.freecodecamp.com/email-submit" id="form">
+				<input id="email" type="email" placeholder="请输入您的邮箱地址" required name="email">
+				<input type="submit" id="submit" value="提交">
+			</form>
+			<iframe id="video" src="https://learning.dcloud.io/#/?vid=0" frameborder="0"></iframe>
+		</footer>
+
 	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
