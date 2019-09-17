@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* 通用样式 */
+		div,p {
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		.container {
+			width: 608px;
+			height: 300px;
+			margin:  50px auto 0;
+			border: 2px solid gray;
+			color: white;
+		}
+		.a {
+			width: 400px;
+			border: 2px solid lightgray;
+		}
+		.b {
+			width: 200px;
+			border: 2px solid lightgreen;
+		}
+		.one {
+			background-color: darkred;
+			width: 350px;
+			height: 180px;
+		}
+		.two {
+			background-color: darkgreen;
+			width: 150px;
+			height: 90px;
+		}
+		.three {
+			background-color: orange;
+			width: 150px;
+			height: 90px;
+		}
+		.four {
+			background-color: blue;
+			width: 150px;
+			height: 90px;
+		}
+		.five {
+			background-color: purple;
+			width: 150px;
+			height: 180px;
+		}
+		
+		/* Flex布局样式 */
+		#Flex {
+			display: flex;
+			/*container的width低于608px就会换行，无视300px的高度限制*/
+			flex-wrap: wrap;   
+		}
+		
+		#Flex .a {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			/*align-content: space-around;*/
+		
+		}
+
+		#Flex .b {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		/* #Flex2 {
+			height: 400px;
+			display: flex;
+			flex-wrap: wrap;   
+			justify-content: space-around; 
+			align-items: center;
+			align-content: space-around;
+		} */
+		
+		
+
+
+		/* Grid布局 */
+	</style>
+</head>
+<body>
+	<div id="Flex" class="container">
+		<div class="a">
+			<div class="one item">1
+				<p>Flex layout</p>
+			</div>
+			<div class="two item">2</div>
+			<div class="three item">3</div>
+		</div>
+		<div class="b">
+			<div class="four item">4</div>
+			<div class="five item">5</div>
+		</div>
+	</div>
+	<!-- Flex2项目失败，因为无法控制多根轴线中的某个item的align方式 -->
+	<!-- <div id="Flex2" class="container">
+		<div class="one item">1</div>
+		<div class="two item">2</div>
+		<div class="three item">3</div>
+		<div class="four item">4</div>
+		<div class="five item">5</div>
+	</div> -->
+
+
+	<div id="Grid" class="container">
+		<div class="a">
+			<div class="one">1
+				<p>Grid layout</p>
+			</div>
+			<div class="two">2</div>
+			<div class="three">3</div>
+		</div>
+		<div class="b">
+			<div class="four">4</div>
+			<div class="five">5</div>
+		</div>
+	</div>
+
+	
+</body>
+</html>
