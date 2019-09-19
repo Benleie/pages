@@ -9,6 +9,7 @@ let Item = {
   },
   methods:{
       deleteToDo(){
+          console.log(this)
           this.$emit('del', this.todo.id)
       }
   }
@@ -38,6 +39,7 @@ let Tabs = {
   },
   methods: {
       toggleFilter(state){
+          console.log(this)
           this.$emit("toggleTabs", state)
       },
       clearAllCompleted() { this.$emit('clearAll') } 
@@ -47,12 +49,19 @@ let Tabs = {
 let id = 0;
 
 //全局注册组件
+
+Vue.component('Tabs',Tabs)
 Vue.component('Item',Item)
 
 var app = new Vue({
   el: '#app',
-  // 局部注册组件
-  component: { Tabs },
+  // 局部注册组件  失败。。
+  /*components: { 
+    'Tabs': Tabs 
+  },
+  hhh: {
+    Tabs
+  },*/
   data: {
     todos: [],
     filter: "all"
