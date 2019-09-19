@@ -3,12 +3,81 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Todolist</title>
+	<link rel="stylesheet" href="./index.css">
+	<style type=""></style>
 	<script src="https://cdn.bootcss.com/vue/2.5.17/vue.js"></script>
 </head>
 <body>
-	<div id="root">
-		
+	<div id="app">
+		<div id="cover">
+
+			<header class="main-header">
+				<h1>Htodo</h1>
+			</header>
+
+			<section class="real-app" id="real-app">
+		        <input 
+		            type="text" 
+		            class="add-input"
+		            autofocus 
+		            placeholder="接下来做什么呢"
+		            @keyup.enter="addTodo"
+		        >
+
+		        
+		        <Item 
+		            :todo="todo"
+		            v-for="todo in filteredTodos"
+		            :key="todo.id"
+		            @del="deleteTodo"
+		        />
+
+				
+		        <Tabs 
+		            :filter="filter" 
+		            :todos="todos"
+		            @toggleTabs="toggleFilter"
+		            @clearAll="clearAllCompleted"
+		        />
+
+		    </section>
+
+		    <div id="footer" >
+                <span>Written by { this.author } </span>
+            </div>
+		</div>
 	</div>
-	<script type="text/javascript" src="app.js"></script>
+	<template id="Item">
+		<div :class="['todo-item', todo.completed ? 'completed' : '']">
+		    <input 
+		        type="checkbox"
+		        class="toggle"
+		        v-model="todo.completed"
+		    >   
+		    <label>{{ todo.content }} </label>
+		    <button class="destroy" @click="deleteToDo"></button>
+		    
+		</div>
+	</template>
+
+	<template id="Tab">
+		<div class="helper">
+				      <span class="left"> 
+				          {{ uncompletedTodoLength}} items left
+				      </span>
+				      <span class="tabs">
+				          <span
+				            v-for="state in states"
+				            :key="state"
+				            :class="[state, filter === state ? 'actived' : '']"
+				            @click="toggleFilter(state)"
+				          >    
+				            {{ state }} 
+				          </span>
+				      </span>
+				      <span class="clear" @click="clearAllCompleted">Clear Completed</span>
+				</div>
+	</template>
+	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
