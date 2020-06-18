@@ -9,7 +9,7 @@ let Item = {
   },
   methods:{
       deleteToDo(){
-          console.log(this)
+          console.log(this.$el)
           this.$emit('del', this.todo.id)
       }
   }

@@ -1,0 +1,154 @@
+<!-- 
+    * 解决segmentfault的一个问题
+    * Flex布局的item需要进行盒状模型的设置
+    * user-select：none;
+    * absolute定位基于其父元素
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .top {
+            position: fixed;
+            width: 100%;
+            min-width: 1080px;
+            height: 88px;
+            overflow: hidden;
+            background-color: black;
+            z-index: 5;
+        }
+        .top_con {
+            position: relative;
+            width: 1080px;
+            margin: 0 auto;
+            /* border: 1px solid white; */
+        }
+        .top_con ul {
+            float: left;
+            padding: 27px 0 0 46px;
+        }
+        .top_con li{
+            float: left;
+            margin: 0 24px;
+        }
+        .top_con li a {
+            color: #ccc;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .top_con li a:hover {
+            color: #e69800;
+        }
+        .logo {
+            width: 129px;
+            height: 66px;
+            display: block;
+            text-indent: -999em;
+            margin-top: 5px;
+            margin-left: 1px;
+            float: left;
+            background-position: 0 0;
+        }
+        .logo {
+            background: url(./logo.png);
+        }
+        .btn_enter {
+            position: absolute;
+            top: 19px;
+            right: 0;
+            display: block;
+            width: 142px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;  
+            color: #fff;
+            background: #e69800;
+            text-shadow: 1px 1px 1px #b27601;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            /* width: 100%; */
+            height: 100%;
+        }
+        .flex{
+            width: 1200px;
+            height: 66px;
+            background-color: yellow;
+            display: flex;
+            margin: 0 auto;
+            line-height: 66px;
+            justify-content: space-between;
+
+        }
+        .flex li{
+            list-style: none;
+            width:500px;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .noselect {
+            user-select:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top_con">
+            <a href="https://pubg.qq.com/main.shtml" class="logo" title="绝地求生官方网站">绝地求生官方网站</a>
+            <ul class="clearfix">
+                <li><a href="https://pubg.qq.com/" title="官网首页">官网首页</a></li>
+                <li><a href="https://pubg.qq.com/" title="绑定查询">绑定查询</a></li>
+                <li><a href="https://pubg.qq.com/" title="国服预约">国服预约</a></li>
+                <li><a href="https://pubg.qq.com/" title="老兵绑定">老兵绑定</a></li>
+                <li><a href="https://pubg.qq.com/" title="游戏特色">游戏特色</a></li>
+                <li><a href="https://pubg.qq.com/" title="社区APP">社区APP</a></li>
+                <li><a href="https://pubg.qq.com/" title="网吧认证">网吧认证</a></li>
+            </ul>
+            <a href="https://pubg.qq.com/main.shtml" class="btn_enter" title="进入官网" >进入官网</a>
+        </div>
+        
+
+    </div>
+    <ul class="float">
+        <li><a href="#">官网首页</a></li>
+        <li><a href="#">绑定查询</a></li>
+        <li><a href="#">国服预约</a></li>
+        <li><a href="#">老兵绑定</a></li>
+        <li><a href="#">游戏特色</a></li>
+    </ul>
+    
+    <ul class="flex">
+        <li><a href="#">官网首页</a></li>
+        <li><a href="#">绑定查询</a></li>
+        <li><a href="#">国服预约</a></li>
+        <li><a href="#">老兵绑定</a></li>
+        <li><a href="#">游戏特色</a></li>
+    </ul>
+    <div>
+        <p class="noselect">不可选中</p>
+    </div>
+
+
+</body>
+</html>
