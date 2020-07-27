@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2EX</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        a {
+            text-decoration: none;
+        }
+        #Wrapper {
+            text-align: center;
+            background-color: #e2e2e2;
+        }
+        .content {
+            min-width: 600px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .box{
+            /* margin-top: 20px; */
+            background-color: #fff;
+            border-radius: 3px;
+            /* box-shadow: ; */
+        }
+        .cell {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: left;
+            border-bottom: 1px solid #e2e2e2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Top">
+        <div class="content">
+            <div style="padding-top: 6px;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="110" align="left"><a href="/" name="top" title="way to explore">
+                                    <div id="Logo"></div>
+                                </a></td>
+                            <td width="auto" align="left">
+                                <div id="Search">
+                                    <form action="https://www.google.com" onsubmit="return dispatch()" target="_blank">
+                                        <div id="qbar"><input type="text" maxlength="40" name="q" id="q" value=""
+                                                onfocus="$('#qbar').addClass('qbar_focus')"
+                                                onblur="$('#qbar').removeClass('qbar_focus')"></div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td width="570" align="right" style="padding-top: 2px;"><a href="/"
+                                    class="top">首页</a>&nbsp;&nbsp;&nbsp;<a href="/member/awecg"
+                                    class="top">awecg</a>&nbsp;&nbsp;&nbsp;<a href="/notes"
+                                    class="top">记事本</a>&nbsp;&nbsp;&nbsp;<a href="/t"
+                                    class="top">时间轴</a>&nbsp;&nbsp;&nbsp;<a href="/settings"
+                                    class="top">设置</a>&nbsp;&nbsp;&nbsp;<a href="#;"
+                                    onclick="if (confirm('确定要从 V2EX 登出？')) { location.href= '/signout?once=96911'; }"
+                                    class="top">登出</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="Wrapper">
+        <div class="content">
+            <div class="sep" style="height:20px"></div>
+            <div class="box">
+                <div class="cell item">
+                    <table cellpadding="0" cellspacing="0" boder="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="48" valign="top" align="center"></td>
+                                <td width="10"></td>
+                                <td>
+                                    <span class="item_title">
+                                        <a href="" class="topic_link">very boring,so let's code</a>
+                                    </span>
+                                    <div></div>
+                                    <span class="topic_info">
+                                        <div class="votes"></div>
+                                        <a class="node" href="/go/programmer">程序员</a> &nbsp;•&nbsp;
+                                        <strong><a href="/member/zerision">zerision</a></strong> 
+                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自 
+                                        <strong><a href="/member/xiaoming1992">xiaoming1992</a></strong>
+                                    </span>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cell item">
+                    <table cellpadding="0" cellspacing="0" boder="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="48" valign="top" align="center"></td>
+                                <td width="10"></td>
+                                <td>
+                                    <span class="item_title">
+                                        <a href="" class="topic_link">very boring,so let's code</a>
+                                    </span>
+                                    <div></div>
+                                    <span class="topic_info">
+                                        <div class="votes"></div>
+                                        <a class="node" href="/go/programmer">程序员</a> &nbsp;•&nbsp;
+                                        <strong><a href="/member/zerision">zerision</a></strong> 
+                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自 
+                                        <strong><a href="/member/xiaoming1992">xiaoming1992</a></strong>
+                                    </span>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+</body>
+
+</html>
