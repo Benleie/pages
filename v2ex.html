@@ -10,24 +10,96 @@
             padding: 0px;
             margin: 0px;
         }
-        a {
+
+        a:active,
+        a:link,
+        a:visited {
+            color: #778087;
             text-decoration: none;
+            word-break: break-word;
         }
+
+        #Top {
+            text-align: center;
+            background-color: #fff;
+            height: 44px;
+            font-size: 15px;
+            font-weight: 500;
+            background-size: 44px 44px;
+            border-bottom: 1px solid rgba(0,0,0,.22);
+            padding: 0 20px;
+        }
+
         #Wrapper {
             text-align: center;
             background-color: #e2e2e2;
+            min-height: 500px;
         }
+
         .content {
             min-width: 600px;
             max-width: 1100px;
             margin: 0 auto;
         }
-        .box{
+
+        #Tabs {
+            background-color: #fff;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+
+            
+        }
+
+        .inner {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 150%;
+            /* text-align: left; */
+        }
+
+        a.tab:active,
+        a.tab:link,
+        a.tab:visited {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 14px;
+            padding: 5px 8px;
+            margin-right: 5px;
+            border-radius: 3px;
+            color: #555;
+
+        }
+
+        a.tab_current:link,
+        a.tab_current:visited {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 14px;
+            padding: 5px 8px;
+            margin-right: 5px;
+            border-radius: 3px;
+            background-color: #334;
+            color: #fff;
+        }
+
+
+        #SecondaryTabs {
+            background-color: #f9f9f9;
+            padding: 10px 10px 10px 20px;
+            text-align: center;
+        }
+
+
+
+        .box {
             /* margin-top: 20px; */
             background-color: #fff;
             border-radius: 3px;
-            /* box-shadow: ; */
+            box-shadow: 0 2px 3px rgba(0,0,0,.1);
+            border-bottom: 1px solid #e2e2e2;
         }
+        
+
         .cell {
             padding: 10px;
             font-size: 14px;
@@ -71,9 +143,37 @@
             </div>
         </div>
     </div>
+
     <div id="Wrapper">
         <div class="content">
             <div class="sep" style="height:20px"></div>
+            <div class="inner" id="Tabs">
+                <a href="/?tab=tech" class="tab">技术</a>
+                <a href="/?tab=creative" class="tab">创意</a>
+                <a href="/?tab=play" class="tab">好玩</a>
+                <a href="/?tab=apple" class="tab">Apple</a>
+                <a href="/?tab=jobs" class="tab">酷工作</a>
+                <a href="/?tab=deals" class="tab">交易</a>
+                <a href="/?tab=city" class="tab">城市</a>
+                <a href="/?tab=qna" class="tab">问与答</a>
+                <a href="/?tab=hot" class="tab">最热</a>
+                <a href="/?tab=all" class="tab_current">全部</a>
+                <a href="/?tab=r2" class="tab">R2</a>
+                <a href="/?tab=nodes" class="tab">节点</a>
+                <a href="/?tab=members" class="tab">关注</a>
+            </div>
+
+            <div class="cell" id="SecondaryTabs">
+                <a href="/go/share">分享发现</a> &nbsp; &nbsp;
+                <a href="/go/create">分享创造</a> &nbsp; &nbsp;
+                <a href="/go/qna">问与答</a> &nbsp; &nbsp;
+                <a href="/go/jobs">酷工作</a> &nbsp; &nbsp;
+                <a href="/go/programmer">程序员</a> &nbsp; &nbsp;
+                <a href="/go/career">职场话题</a> &nbsp; &nbsp;
+                <a href="/go/ideas">奇思妙想</a> &nbsp; &nbsp;
+                <a href="/go/deals">优惠信息</a>
+            </div>
+
             <div class="box">
                 <div class="cell item">
                     <table cellpadding="0" cellspacing="0" boder="0" width="100%">
@@ -89,8 +189,8 @@
                                     <span class="topic_info">
                                         <div class="votes"></div>
                                         <a class="node" href="/go/programmer">程序员</a> &nbsp;•&nbsp;
-                                        <strong><a href="/member/zerision">zerision</a></strong> 
-                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自 
+                                        <strong><a href="/member/zerision">zerision</a></strong>
+                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自
                                         <strong><a href="/member/xiaoming1992">xiaoming1992</a></strong>
                                     </span>
                                 </td>
@@ -113,8 +213,8 @@
                                     <span class="topic_info">
                                         <div class="votes"></div>
                                         <a class="node" href="/go/programmer">程序员</a> &nbsp;•&nbsp;
-                                        <strong><a href="/member/zerision">zerision</a></strong> 
-                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自 
+                                        <strong><a href="/member/zerision">zerision</a></strong>
+                                        &nbsp;•&nbsp; 几秒前 &nbsp;•&nbsp; 最后回复来自
                                         <strong><a href="/member/xiaoming1992">xiaoming1992</a></strong>
                                     </span>
                                 </td>
@@ -123,12 +223,17 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="inner">
+                    <span class="chevron">»</span> &nbsp;
+                    <a href="/recent">更多新主题</a>
+                </div>
             </div>
         </div>
-        
-        
+
+        <div></div>
+        <div class="sep" style="height:20px"></div>
     </div>
-    
+
 </body>
 
 </html>
