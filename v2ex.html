@@ -234,6 +234,40 @@
         <div class="sep" style="height:20px"></div>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script>
+        // let instance = axios.create({
+        //     baseURL:"https://www.v2ex.com/api",
+        //     headers:{
+        //         "Access-Control-Allow-Origin":'http://192.168.1.105:8080',
+        //         "Access-Control-Allow-Headers": "X-Requested-With"
+                
+        //     }
+        // });
+
+        // instance.get("/topics/latest.json")
+        //     .then(function(data) {
+        //         console.log(data.length)
+        //     })
+        $.ajax({
+            url:"https://www.v2ex.com/api/topics/latest.json",
+            dataType:"jsonp",
+            jsonp:"jsonpcallback",
+            success:function(data){
+                console.log(data.length)
+                console.log("ff")
+            },
+            complete:function(){
+                console.log("data is completed!")
+            },
+            error:function(err){
+                console.log(err)
+            }
+        })
+        
+    </script>
 </body>
 
 </html>
